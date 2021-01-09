@@ -1,1 +1,1 @@
-# ecommerce.github.io\
+# ecommerce.github.io/index.php
