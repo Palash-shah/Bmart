@@ -147,11 +147,7 @@ h4{
 small{
 	color: #555;
 }
-.welcome{
-	background: radial-gradient(#fff,#ffd6d6);
-	font-size: 15px; 
-	text-align: center;
-}
+
 
 /*-----------------testimonial-----------*/
 .testimonial{
@@ -186,7 +182,13 @@ small{
 	color: #555;
 	font-size: 16px;
 }
-
+.new p{
+	letter-spacing: 4px;
+	font-size: 10px;
+}
+.new p a{
+		color: #ff523b;
+}
 /*---------brands------------*/
 
 .brands{
@@ -244,7 +246,6 @@ ul{
 .app-logo{
 	margin-top: 20px;
 }
-
 .app-logo img{
 	width: 140px;
 }
@@ -262,11 +263,6 @@ ul{
 	width: 20px;	
 	margin-left: 20px;
 	display: none;
-}
-.look p{
-	color: #f56d1f;
-	font-weight: bold;
-	font-size: 25px;
 }
 
 /*---------media query for menu-------*/
@@ -293,13 +289,6 @@ ul{
 		display: block;
 		cursor: pointer;
 	}
-}
-.new p{
-	letter-spacing: 4px;
-	font-size: 10px;
-}
-.new p a{
-		color: #ff523b;
 }
 /*----------All Product----------*/
 
@@ -359,6 +348,14 @@ select:focus{
 	flex-basis: 24%;
 	cursor: pointer;
 }
+
+.welcome{
+	background: radial-gradient(#fff,#ffd6d6);
+	font-size: 15px; 
+    font-weight: bold;
+	text-align: center;
+}
+
 
 /*-----------cart items----------*/
 .cart-page{
@@ -428,7 +425,7 @@ th:last-child{
 .form-container{
 	background: #fff;
 	width: 300px;
-	height: 500px;
+	height: 400px;
 	position: relative;
 	text-align: center;
 	padding: 20px 0;
@@ -441,14 +438,6 @@ th:last-child{
 	color: #555;
 	padding: 0 10px;
 	cursor: pointer;
-	width: 100px;
-	display: inline-block;
-}
-..form-container p{
-	font-weight: bold;
-	color: #555;
-	cursor: pointer;
-	padding: 0 10px;
 	width: 100px;
 	display: inline-block;
 }
@@ -492,9 +481,11 @@ form .btn:focus{
 	transform: translateX(100px);
 	transition: transform 1s;
 }*/
+.look p{
+	color: #f56d1f;
+	font-weight: bold;
+	font-size: 25px;
 
-.borderfiled {
-	background: #bbb;
 }
 
 
@@ -502,8 +493,9 @@ form .btn:focus{
 @media only screen and (max-width: 600px){
 .row{
 	text-align: center;
+
 }
-.col-1,.col-2,.col-3,.col-4 {
+.col-2,.col-3,.col-4 {
 	flex-basis: 100%;
 }
 
