@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST"){
                 mysqli_stmt_store_result($stmt);
                 if(mysqli_stmt_num_rows($stmt) == 1)
                 {
-                    $username_err = "This username is already taken"; 
+                    echo ($username_err = "This username is already taken"); 
                 }
                 else{
                     $username = trim($_POST['username']);
@@ -73,7 +73,7 @@ if(empty($username_err) && empty($password_err) && empty($confirm_password_err))
         // Try to execute the query
         if (mysqli_stmt_execute($stmt))
         {
-            header("location: login.php");
+            header("location: login");
         }
         else{
             echo "Something went wrong... cannot redirect!";
@@ -99,7 +99,15 @@ mysqli_close($conn);
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<style>
+.new p{
+	letter-spacing: 4px;
+	font-size: 10px;
+}
+.new p a{
+		color: #ff523b;
+}
+</style>
 </head>
 <body>
   
@@ -110,11 +118,11 @@ mysqli_close($conn);
      </div>
     <nav>
       <ul id="Menuitems">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Product</a></li>
+        <li><a href="index">Home</a></li>
+        <li><a href="product">Product</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Contact</a></li>
-        <li><a href="">Account</a></li>
+        <li><a href="Welcome">Account</a></li>
       </ul>
     </nav>
     <img src="images/cart.png" width="30px" height="30px">
@@ -122,7 +130,6 @@ mysqli_close($conn);
 
    </div>
    </div>
-   <!-- ----------------order-page------------ -->
 <div class="account-page">
   <div class="container">
     <div class="row">
@@ -139,12 +146,14 @@ mysqli_close($conn);
        <div class="col-2">
  <form action="" method="post" id="RegFrom">
  
-         <input type="text" class="form-control" name="username" id="inputEmail4" placeholder="Username">
-         <input type="password" class="form-control" name ="password" id="inputPassword4" placeholder="Password">
-         <input type="password" class="form-control" name ="confirm_password" id="inputPassword" placeholder="Confirm Password">
+         <input type="text" class="form-control" name="username" id="inputEmail4" placeholder="Username" required>
+         <input type="password" class="form-control" name ="password" id="inputPassword4" placeholder="Password" required>
+         <input type="password" class="form-control" name ="confirm_password" id="inputPassword" placeholder="Confirm Password" required>
   
 
   <button type="submit" class="btn">Sign Up</button>
+   <div class="new"><br><p>Have an <a href="login">account?</a></p>
+</div>
 </form>
 </div>
        </div> 
@@ -166,7 +175,7 @@ mysqli_close($conn);
       </div>
 
       <div class="footer-col-2">
-        <img src="images/logo.png">
+        <img src="images/logo-white.png">
         <p>Our purpose is to sustaninably make the pleasure and Benefits of Sports Accessible to the Many.</p>
       </div>
 
@@ -212,5 +221,11 @@ mysqli_close($conn);
     }
   }
 </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>

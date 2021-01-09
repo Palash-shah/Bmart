@@ -4,7 +4,7 @@ session_start();
 
 if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 {
-    header("location: login.php");
+    header("location: login");
 }
 
 
@@ -30,19 +30,18 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
      </div>
     <nav>
       <ul id="Menuitems">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Product</a></li>
+        <li><a href="index">Home</a></li>
+        <li><a href="product">Product</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Contact</a></li>
-        <li><a href="">Account</a></li> 
-        <li><a href="logout.php">Logout</a></li> 
-     </ul>
+        <li><a href="welcome">Account</a></li>
+        <li><a href="logout">Logout</a></li> 
+      </ul>
     </nav>
     <img src="images/cart.png" width="30px" height="30px">
     <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
 </div>
 </div>
-
 <!-- 
 </div>
   <div class="navbar-collapse collapse">
@@ -56,7 +55,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !==true)
 
 <div class="container mt-4">
   <div class="welcome">
-<h3><?php echo "Welcome ". $_SESSION['username']?>! Thanks for creating account 😍</h3>
+<h3 align="center" ><?php echo "Welcome ". $_SESSION['username']?>! Thanks for creating account 😍</h3>
 </div>
 </div>
 <!-- ---------------------Featured product---------------------- -->

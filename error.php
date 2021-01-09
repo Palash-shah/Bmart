@@ -35,6 +35,7 @@
    </div>
    </div>
  <center>
+ <br><br><br>
   <img src="images/logo.png" width="100px">
 <div class="look">
  <p>Looking for Something ?</p>
@@ -43,7 +44,7 @@
 <h3> Go to meraburhanpur.com <a href="index.html"><b> Home </b></a> page.</h3>
 </center>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 
 <!-- ------------footer----------- -->
   <div class="footer">

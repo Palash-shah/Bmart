@@ -1,6 +1,6 @@
 <?php 
 if(isset($_POST['submit'])){
-    $to = "meraburhanpur450331@gmail.com"; // this is your Email address
+    $to = "contact-ab10df@inbox.mailtrap.io"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
@@ -28,7 +28,70 @@ if(isset($_POST['submit'])){
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<style>
+.account-page{
+	padding: 50px 0;
+	background: radial-gradient(#fff,#ffd6d6);
+}
+.form-container{
+	background: #fff;
+	width: 300px;
+	height: 500px;
+	position: relative;
+	text-align: center;
+	padding: 20px 0;
+	margin: auto;
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+	overflow: hidden;
+}
+.form-container span{
+	font-weight: bold;
+	color: #555;
+	padding: 0 10px;
+	cursor: pointer;
+	width: 100px;
+	display: inline-block;
+}
+..form-container p{
+	font-weight: bold;
+	color: #555;
+	cursor: pointer;
+	padding: 0 10px;
+	width: 100px;
+	display: inline-block;
+}
+.form-btn{
+	display: inline-block;
+}
+.form-container form{
+	max-width: 300px;
+	padding: 0 20px;
+	position: absolute;
+	top: 130px;
+}
+form input{
+	width: 100%;
+	height: 30px;
+	margin: 10px 10px;
+	padding: 10px 10px;
+	border: 1px solid #ccc;
+}
+form .btn{
+	width: 100%;
+	border: none;
+	cursor: pointer;
+	margin: 10px 10px;
+}
+form .btn:focus{
+	outline: none;
+}
+/*#LoginForm{
+	left: -300px;
+}*/
+#RegForm{
+	left: 10px;
+}
+</style>
 </head>
 <body>
   <div class="container">
@@ -38,12 +101,12 @@ if(isset($_POST['submit'])){
      </div>
     <nav>
       <ul id="Menuitems">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Product</a></li>
+        <li><a href="index">Home</a></li>
+        <li><a href="product">Product</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Contact</a></li>
-        <li><a href="">Account</a></li> 
-        <li><a href="logout.php">Logout</a></li> 
+        <li><a href="welcome">Account</a></li> 
+        <li><a href="logout">Logout</a></li> 
      </ul>
     </nav>
     <img src="images/cart.png" width="30px" height="30px">
@@ -71,7 +134,11 @@ if(isset($_POST['submit'])){
 </div>
 </div>
 </div>
+
     <br>
+<br>
+<br>
+
 
 
     <!-- ------------footer----------- -->

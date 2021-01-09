@@ -5,7 +5,7 @@ session_start();
 // check if the user is already logged in
 if(isset($_SESSION['username']))
 {
-    header("location: index.html");
+    header("location: welcome");
     exit;
 }
 require_once "config.php";
@@ -17,7 +17,7 @@ $err = "";
 if ($_SERVER['REQUEST_METHOD'] == "POST"){
     if(empty(trim($_POST['username'])) || empty(trim($_POST['password'])))
     {
-        echo ($err = "Please enter username + password");
+        $err = "Please enter username + password";
     }
     else{
         $username = trim($_POST['username']);
@@ -50,16 +50,21 @@ if(empty($err))
                             $_SESSION["loggedin"] = true;
 
                             //Redirect user to welcome page
-                            header("location: index.html");
+                            header("location: welcome");
                             
-         }
-       }
-     }
-   }
- }    
-}
-?>
+                        }
+                    }
 
+                }
+
+    }
+}    
+
+
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +75,15 @@ if(empty($err))
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<style>
+.new p{
+	letter-spacing: 4px;
+	font-size: 10px;
+}
+.new p a{
+		color: #ff523b;
+}
+</style>
 </head>
 <body>
   
@@ -81,11 +94,11 @@ if(empty($err))
      </div>
     <nav>
       <ul id="Menuitems">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Product</a></li>
+        <li><a href="index">Home</a></li>
+        <li><a href="product">Product</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Contact</a></li>
-        <li><a href="welcome.php">Account</a></li>
+        <li><a href="welcome">Account</a></li>
       </ul>
     </nav>
     <img src="images/cart.png" width="30px" height="30px">
@@ -110,18 +123,20 @@ if(empty($err))
 
        <div class="col-2">
          
-<form action="" method="post" id="LoginForm">
+<form action="" method="post" id="RegForm">
   <div>
     <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username">
   </div>
-  <div>
+  <div >
     <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
-  <div class="new"><br><p>Don't have an <a href="register.php">account?</a></p>
+ <div class="new"><br><p>&nbsp;&nbsp;Don't have an <a href="register">account?</a></p>
 </div>
 </form>
+
+
 
        </div>
 
@@ -144,7 +159,7 @@ if(empty($err))
       </div>
 
       <div class="footer-col-2">
-        <img src="images/logo.png">
+        <img src="images/logo-white.png">
         <p>Our purpose is to sustaninably make the pleasure and Benefits of Sports Accessible to the Many.</p>
       </div>
 
