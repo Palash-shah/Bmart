@@ -1,0 +1,157 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+nav{
+  flex: 1;
+  text-align: right;
+}
+nav ul 
+{
+  display: inline-block;
+  list-style-type: none;
+}
+nav ul li{
+  display: inline-block;
+  margin-right: 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #555;
+}
+nav ul li a:hover{
+  cursor: pointer;
+  text-decoration: none;
+  color: #555;
+}
+p{
+  color: #555;
+}
+.menu-icon {
+  width: 20px;  
+  margin-left: 20px;
+  display: none;
+}
+
+/*---------------footer---------------*/
+.footer{
+  background: #000;
+  color: #8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p{
+  color: #8a8a8a;
+}
+.footer h3{
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+.footer-col-1{
+  flex-basis: 30%;
+}
+.footer-col-2{
+  flex:1;
+  text-align: center;
+}
+.footer-col-2 img{
+  width: 180px;
+  margin-bottom: 20px;
+}
+.footer-col-3 ,.footer-col-4{
+  flex-basis: 12%;
+  text-align: center;
+}
+ul{
+  list-style-type: none;
+}
+.app-logo{
+  margin-top: 20px;
+}
+
+.app-logo img{
+  width: 140px;
+}
+.footer hr{
+  border: none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright{
+  text-align: center;
+}
+
+.menu-icon {
+  width: 20px;  
+  margin-left: 20px;
+  display: none;
+}
+.look p{
+  color: #f56d1f;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 800px)
+{
+  nav ul{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color:transparent;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav ul li a{
+    color: black;
+  }
+  .menu-icon{
+    display: block;
+    cursor: pointer;
+  }
+}
+/*---------media query for andriod-------*/
+@media only screen and (max-width: 600px){
+.row{
+  text-align: center;
+}
+.col-1,.col-2,.col-3,.col-4 {
+  flex-basis: 100%;
+}
+
+.single-product .row{
+  text-align: left;
+}
+.single-product .row{
+  padding: 20px 0;
+}
+.single-product h1{
+  font-size: 26px;
+  line-height: 32px;
+}
+.cart-info p{
+  display: none;
+}
+}
