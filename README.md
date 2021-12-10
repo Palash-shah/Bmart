@@ -3,7 +3,7 @@
 ## Summary
 Hi everyone! ❤️
 
-This is a very simple e-commerce website which was made by me as a final year project of my diploma engineering dedicated to the sale of vegetable and fruits.
+Bmart is an e-commerce website that Promotes Small Businessmen to sell vegetables and fruits online.
 
 ## Platform Used
 ### Front-End
