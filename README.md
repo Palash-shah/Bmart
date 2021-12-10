@@ -2,6 +2,7 @@
 
 ## Summary:
 Hi everyone! ❤️
+
 This is a very simple e-commerce website which was made by me as a final year project of my diploma engineering dedicated to the sale of vegitable and fruits.
 
 ## Platform Used
