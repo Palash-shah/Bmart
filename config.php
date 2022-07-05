@@ -3,10 +3,10 @@
 This file contains database configuration assuming you are running mysql using user "root" and password ""
 */
 
-define('DB_SERVER', 'bmart.mysql.database.azure.com');
-define('DB_USERNAME', 'bmartuser@bmart');
-define('DB_PASSWORD', 'Palash@123');
-define('DB_NAME', 'bmart');
+define('DB_SERVER', '');
+define('DB_USERNAME', '');
+define('DB_PASSWORD', '');
+define('DB_NAME', '');
 
 // Try connecting to the Database
 $conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
